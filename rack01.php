@@ -1,4 +1,5 @@
 <?php
+$rack_id = 1;
 require_once("conexao.php");
 
 use Programa\Programa;
