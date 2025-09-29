@@ -1,0 +1,98 @@
+/* home */
+.r-wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.r-head { margin: 8px 0 18px; }
+.r-muted { color: #6c757d; font-size: 12px; margin: 0; }
+
+/* Força 3 colunas e reduz espaçamento */
+.r-grid{
+  display: grid !important;                       /* ganha do appv2 se houver conflito */
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 12px;                                      /* menor que 20px para caber melhor */
+}
+
+/* Responsivo (2 colunas / 1 coluna) */
+@media (max-width: 992px){
+  .r-grid{ grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px){
+  .r-grid{ grid-template-columns: 1fr !important; }
+}
+
+/* Card mais compacto */
+.r-card{
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;                            /* levemente menor */
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.r-card:hover{ transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.08); }
+
+/* Mídia mais baixa para diminuir a altura total do card */
+.r-card__media{
+  width: 100%;
+  aspect-ratio: 21 / 9;                           /* era 16/9; fica mais “panorâmico” (mais baixo) */
+  object-fit: cover;
+  display: block;
+  background: #f1f3f5;
+}
+
+.r-edit-icon {
+    float: right;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.2s;
+}
+
+.r-edit-icon:hover {
+    color: #000;
+}
+
+/* Texto mais enxuto */
+.r-card__body{ padding: 10px 12px; }              /* era 14px 16px 18px */
+.r-card__title{ font-weight: 700; font-size: .98rem; margin: 0 0 4px; } /* era 1.05rem */
+.r-card__desc{ margin: 0; color: #444; line-height: 1.35; font-size: .9rem; } /* era .95rem */
+
+      /* rack01 */
+      .r-wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+      .r-head { margin: 8px 0 18px; }
+      .r-muted { color: #6c757d; font-size: 12px; margin: 0; }
+
+      .r-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+      @media (min-width: 992px) { .r-grid { grid-template-columns: 1fr 1fr; } }
+
+      .r-card {
+        background: #fff;
+        border: 1px solid #e9ecef;
+        border-radius: 14px;
+        box-shadow: 0 6px 16px rgba(0,0,0,.06);
+        overflow: hidden;
+      }
+      .r-card .card-header { background: #f8f9fa; font-weight: 600; }
+      .r-badge { font-size: 11px;
+        background:#eef2ff;
+        color:#3730a3;
+        border:1px solid #c7d2fe;
+        padding:2px 6px;
+        border-radius: 999px;
+        font-weight: 500;
+        }
+      .mb-3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      /* Campos editáveis inline */
+      [contenteditable="true"] { outline: 0; border-bottom: 1px dashed #ced4da; padding: 2px 0; }
+      [contenteditable="true"]:focus { background: #fffbe6; }
+
+      .thumb { width: 100%; max-width: 100%; height: auto; border-radius: 10px; border:1px solid #e9ecef; }
+
+      /* Impressão */
+      @media print {
+        .no-print { display: none !important; }
+        .r-grid { grid-template-columns: 1fr; }
+        .r-card { box-shadow: none; border: 1px solid #000; }
+        [contenteditable="true"] { border-bottom: 1px dotted #000; }
+      }
