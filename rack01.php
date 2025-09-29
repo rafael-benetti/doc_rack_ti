@@ -27,17 +27,25 @@ $usuario_dados = getUsuarioItanet(getUsuarioSessao());
         <?php require_once("../include/header_frame_itanet.php"); ?>
 
         <div class="r-wrap">
-            <div class="r-head d-flex align-items-center justify-content-between">
-                <div>
-                    <h3 style="margin:0 0 6px;"><?php echo $programa->nome; ?> — Documentação do Rack 01 (Redes)</h3>
-                    <p class="r-muted">Usuário: <?php echo htmlspecialchars($usuario_dados['nome'] ?? ''); ?></p>
-                </div>
-                <div class="no-print">
-                    <a class="btn btn-primary btn-sm" href="#" onclick="window.print()">Imprimir</a>
-                </div>
-            </div>
+      <div class="r-head d-flex align-items-center justify-content-between">
+        <div>
+          <h3 style="margin:0 0 6px;"><?php echo $programa->nome; ?> — Documentação do Rack 01 (Redes)</h3>
+          <p class="r-muted">Usuário: <?php echo htmlspecialchars($usuario_dados['nome'] ?? ''); ?></p>
+        </div>
+        <div class="no-print">
+          <a class="btn btn-primary btn-sm" href="#" onclick="window.print()">Imprimir</a>
+        </div>
 
-            <section class="r-grid">
+        
+      </div>
+      <div class="r-head d-flex align-items-center justify-content-between">
+          <div>
+            <p class="r-muted">Rack de recebimento dos links dedicados e distribuição no bloco administrativo (patch panels e switches).</p>
+          </div>
+        </div>
+
+
+      <section class="r-grid">
 
   <!-- FICHA DO RACK -->
   <div class="r-card card">
@@ -118,7 +126,7 @@ $usuario_dados = getUsuarioItanet(getUsuarioSessao());
 
   <!-- OBS & FOTOS -->
   <div class="r-card card">
-    <div class="card-header">📝 Observações & 📷 Fotos</div>
+    <div class="card-header">📝 Observações</div>
     <div class="card-body">
       <div class="mb-3">
         <div><span class="r-badge">Observações</span></div>

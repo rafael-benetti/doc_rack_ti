@@ -32,6 +32,11 @@ $usuario_dados = getUsuarioItanet(getUsuarioSessao());
         <a class="btn btn-primary btn-sm" href="#" onclick="window.print()">Imprimir</a>
       </div>
     </div>
+            <div class="r-head d-flex align-items-center justify-content-between">
+          <div>
+            <p class="r-muted">Rack principal da sala de TI, com servidores, DIOs, conversores de fibra e switches core.</p>
+          </div>
+        </div>
 
     <section class="r-grid">
 
@@ -103,7 +108,7 @@ $usuario_dados = getUsuarioItanet(getUsuarioSessao());
 
       <!-- OBS & FOTOS -->
       <div class="r-card card">
-        <div class="card-header">📝 Observações & 📷 Fotos</div>
+        <div class="card-header">📝 Observações</div>
         <div class="card-body">
           <div class="mb-3">
             <div><span class="r-badge">Observações</span></div>

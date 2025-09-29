@@ -61,7 +61,7 @@ $usuario_dados = getUsuarioItanet(getUsuarioSessao());
                     </a>
                     <div class="r-card__body">
                         <h4 class="r-card__title">Rack 03</h4>
-                        <p class="r-card__desc">Rack de contingência com equipamentos redundantes e monitoramento.</p>
+                        <p class="r-card__desc">Rack de contingência com storage principal e secundário.</p>
                     </div>
                 </article>
             </section>
